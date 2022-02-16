@@ -2,6 +2,8 @@
 var buttonLetsCook = document.querySelector('#letsCook');
 var mealChoiceForm = document.querySelector('form[name="mealRadio"]');
 var mealChoiceSelection = mealChoiceForm.elements['mealChoice'];
+var mealBox = document.querySelector('box:nth-child(2)');
+var cookPot = document.querySelector('img');
 
 buttonLetsCook.addEventListener('click', makeSuggestion);
 
@@ -17,13 +19,19 @@ function makeSuggestion() {
       var mealToShow = randomEntireMeal();
     }
 
-    return alert(`${mealToShow}!`)
-
+    // alert(`${mealToShow}!`)
+    mealBox.innerHTML =`
+    <p2>You Should Make:</p2>
+    <p3>${mealToShow}!</p3>
+    `
     toggleCookPot();
+
+    // return
 }
 
 function toggleCookPot() {
 // make image of cookpot hide
+cookPot.innerHTML += 'hidden';
 }
 
 function generateRandomIndex(array){
