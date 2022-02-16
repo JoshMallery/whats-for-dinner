@@ -3,8 +3,40 @@
     <link rel="stylesheet" href="./styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   </head>
+  <nav>
+     What's for Dinner?
+     <button>
+       ADD A RECIPE
+     </button>
+  </nav>
   <body>
-    
+    <section>
+      <box>
+        <p>What are you looking for?<p1>*</p1></p>
+        <div>
+          <input type="radio" id="side" name="mealChoice">
+          <label for="side">Side</label>
+        </div>
+        <div>
+          <input type="radio" id="mainDish" name="mealChoice">
+          <label for="side">Main Dish</label>
+        </div>
+        <div>
+          <input type="radio" id="dessert" name="mealChoice">
+          <label for="side">Dessert</label>
+        </div>
+        <div>
+          <input type="radio" id="Entire Meal" name="mealChoice">
+          <label for="side">Entire Meal</label>
+        </div>
+        <button id="letsCook">
+          LET'S COOK!
+        </button>
+      </box>
+      <box>
+        <img src="./assets/cookpot.svg" alt="pot for cooking food">
+      </box>
+    </section>
   </body>
   <script type="text/javascript" src="main.js"></script>
 </html>
