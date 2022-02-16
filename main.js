@@ -1,30 +1,54 @@
 
 var buttonLetsCook = document.querySelector('#letsCook');
-
-//var buttonMealChoice = document.querySelector('#letsCook');
 var mealChoiceForm = document.querySelector('form[name="mealRadio"]');
-// var mealChoiceSelection = document.forms.elements.mealRadio.querySelector('input[name=mealChoice]:checked');
-var mealChoiceSelection = mealChoiceForm.elements['mealChoice']
-//alert(mealChoiceForm.value);
-var sides = [];
-var mainDish = [];
-var dessert = [];
+var mealChoiceSelection = mealChoiceForm.elements['mealChoice'];
 
 buttonLetsCook.addEventListener('click', makeSuggestion);
-//get value of radio button input.value;
 
 function makeSuggestion() {
-//based on value of radio button make a meal choice from the arrays
-// alert(mealChoiceSelection)
-  alert(mealChoiceSelection.value);
-  // alert(mealChoice.value)
-  toggleCookPot();
+
+  if(mealChoiceSelection.value === 'side') {
+    var mealToShow = randomSide();
+    } else if (mealChoiceSelection.value === 'mainDish'){
+      var mealToShow = randomMainDish();
+    } else if (mealChoiceSelection.value === 'dessert'){
+      var mealToShow = randomDessert();
+    } else {
+      var mealToShow = randomEntireMeal();
+    }
+
+    return alert(`${mealToShow}!`)
+
+    toggleCookPot();
 }
 
 function toggleCookPot() {
 // make image of cookpot hide
 }
 
-function generateRandomItem(){
+function generateRandomIndex(array){
+  return Math.floor(Math.random() * array.length);
+  }
 
-}
+function randomSide() {
+  var rSide = sides[generateRandomIndex(sides)];
+  return rSide
+  }
+
+function randomMainDish() {
+  var rMainDish = mainDishes[generateRandomIndex(mainDishes)];
+  return rMainDish
+  }
+
+function randomDessert() {
+  var rDesserts = desserts[generateRandomIndex(desserts)];
+  return rDesserts
+  }
+
+function randomEntireMeal() {
+  var rSide = randomSide();
+  var rMainDish = randomMainDish();
+  var rDesserts = randomDessert();
+  return `${rMainDish} with a side of ${rSide} and a dessert of ${rDesserts}`
+
+  }
