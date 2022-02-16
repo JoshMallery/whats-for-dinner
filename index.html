@@ -13,22 +13,24 @@
     <section>
       <box>
         <p>What are you looking for?<p1>*</p1></p>
-        <div>
-          <input type="radio" id="side" name="mealChoice">
-          <label for="side">Side</label>
-        </div>
-        <div>
-          <input type="radio" id="mainDish" name="mealChoice">
-          <label for="side">Main Dish</label>
-        </div>
-        <div>
-          <input type="radio" id="dessert" name="mealChoice">
-          <label for="side">Dessert</label>
-        </div>
-        <div>
-          <input type="radio" id="Entire Meal" name="mealChoice">
-          <label for="side">Entire Meal</label>
-        </div>
+        <form name="mealRadio">
+          <div>
+            <input type="radio" id="side" name="mealChoice" value="side">
+            <label for="side">Side</label>
+          </div>
+          <div>
+            <input type="radio" id="mainDish" name="mealChoice" value ="mainDish">
+            <label for="side">Main Dish</label>
+          </div>
+          <div>
+            <input type="radio" id="dessert" name="mealChoice" value ="dessert">
+            <label for="side">Dessert</label>
+          </div>
+          <div>
+            <input type="radio" id="Entire Meal" name="mealChoice" value = "entireMeal">
+            <label for="side">Entire Meal</label>
+          </div>
+        </form>
         <button id="letsCook">
           LET'S COOK!
         </button>
@@ -39,4 +41,6 @@
     </section>
   </body>
   <script type="text/javascript" src="main.js"></script>
+  <script src="data.js"></script>
+  <script src="Meal.js"></script>
 </html>
