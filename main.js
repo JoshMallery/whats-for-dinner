@@ -19,14 +19,16 @@ function makeSuggestion() {
       var mealToShow = randomEntireMeal();
     }
 
-    // alert(`${mealToShow}!`)
     mealBox.innerHTML =`
     <p2>You Should Make:</p2>
     <p3>${mealToShow}!</p3>
+    <box>
+      <buttonSection>
+        <button class ="clear">Clear</button>
+      </buttonSection>
+    </box>
     `
     toggleCookPot();
-
-    // return
 }
 
 function toggleCookPot() {
