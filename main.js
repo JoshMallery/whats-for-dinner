@@ -43,10 +43,10 @@ function clearBox() {
   mealBox.innerHTML = '<img src="./assets/cookpot.svg" alt="pot for cooking food">';
   }
 
-function mealLanguage(meal) {
+function mealLanguage(fullMeal) {
   var mealToEat = `
   <p2>You Should Make:</p2>
-  <p3>${meal}!</p3>
+  <p3>${fullMeal}!</p3>
   <box>
     <buttonSection>
       <button class ="clear" id="clearSelect">Clear</button>
