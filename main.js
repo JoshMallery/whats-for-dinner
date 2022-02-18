@@ -8,6 +8,12 @@ var cookPot = document.querySelector('img');
 buttonLetsCook.addEventListener('click', makeSuggestion);
 
 function makeSuggestion() {
+// event.preventDefault()
+
+if(mealChoiceSelection.value === ''){
+  alert('Please Decide on what you are looking then click Let\'s Cook');
+  return
+}
 
   if(mealChoiceSelection.value === 'side') {
     var mealToShow = randomSide();
