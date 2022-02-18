@@ -1,6 +1,6 @@
-/* * {
+* {
   border: 1px solid red;
-} */
+}
 
 body {
   background: url('./assets/burger-friends.jpg');
@@ -91,13 +91,52 @@ p1 {
 p2 {
   font-style: italic;
   font-size: 25px;
-  padding: 25px;
+  padding: 20px;
 }
 
 p3 {
   font-size: 30px;
-  padding: 25px;
+  padding: 20px;
   text-align: center;
+}
+
+.clear {
+  border-radius: 5px;
+  padding: 5px;
+  background-color: #95a5a6;
+  border: none;
+  font-size: 15px;
+  width: 65px;
+  height: 35px;
+  color: white;
+  /* display: flex;
+  flex-direction: flex-end;
+  justify-content: flex-end; */
+}
+
+box:nth-child(3) {
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px;
+  /* background-color: rgba(225, 225, 225, .9); */
+  /* height: 400px;
+  width: 505px; */
+  /* opacity: 1; */
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: flex-end;
+  align-content: space-around;
+  /* padding: 50px; */
+
+}
+
+buttonSection {
+  height: 175px;
+  width: 475px;
+  display: flex;
+  flex-direction: flex-end;
+  justify-content: flex-end;
+  align-items: flex-end;
+
 }
 /* font-family: 'Roboto', sans-serif;
 
